@@ -11,69 +11,94 @@ struct INSSystemStatus
 {
     enum Status1
     {
-        SERIAL_IN_R_ERR,
-        INPUT_A_ERR,
-        INPUT_B_ERR,
-        INPUT_C_ERR,
-        INPUT_D_ERR,
-        INPUT_E_ERR,
-        // 6-7 reserved
+        SERIAL_IN_R_ERR = 0,
+        INPUT_A_ERR = 1,
+        INPUT_B_ERR = 2,
+        INPUT_C_ERR = 3,
+        INPUT_D_ERR = 4,
+        INPUT_E_ERR = 5,
+        INPUT_F_ERR = 6,
+        INPUT_G_ERR = 7,
         INPUT_R_ACTIVITY = 8,
-        INPUT_A_ACTIVITY,
-        INPUT_B_ACTIVITY,
-        INPUT_C_ACTIVITY,
-        INPUT_D_ACTIVITY,
-        INPUT_E_ACTIVITY,
-        // 14-15 reserved
+        INPUT_A_ACTIVITY = 9,
+        INPUT_B_ACTIVITY = 10,
+        INPUT_C_ACTIVITY = 11,
+        INPUT_D_ACTIVITY = 12,
+        INPUT_E_ACTIVITY = 13,
+        INPUT_F_ACTIVITY = 14,
+        INPUT_G_ACTIVITY = 15,
         OUTPUT_R_FULL = 16,
-        OUTPUT_A_FULL,
-        OUTPUT_B_FULL,
-        OUTPUT_C_FULL,
-        OUTPUT_D_FULL,
-        OUTPUT_E_FULL,
-        ETHERNET_PORT_FULL,
+        OUTPUT_A_FULL = 17,
+        OUTPUT_B_FULL = 18,
+        OUTPUT_C_FULL = 19,
+        OUTPUT_D_FULL = 20,
+        OUTPUT_E_FULL = 21,
+        ETHERNET_PORT_FULL = 22,
         // 23 reserved
         INTERNAL_TIME_USED = 24,
         // 25 reserved
         ETHERNET_PORT_ACTIVITY = 26,
-        PULSE_IN_A_ACTIVITY,
-        PULSE_IN_B_ACTIVITY,
-        // 29-31 reserved
+        PULSE_IN_A_ACTIVITY = 27,
+        PULSE_IN_B_ACTIVITY = 28,
+        PULSE_IN_C_ACTIVITY = 29,
+        PULSE_IN_D_ACTIVITY = 30
+        // 31 reserved
     };
 
     enum Status2
     {
-        // 0-1 reserved
+        DVL_BT_DETECTED = 0,
+        DVL_WT_DETECTED = 1,
         GPS_DETECTED = 2,
-        // 3-7 reserved
-        DMI_DETECTED = 8,
-        UTC_DETECTED,
-        ALTITUDE_DETECTED,
-        PPS_DETECTED,
-        ZUPT_MODE_ACTIVATED,
+        GPS2_DETECTED = 3,
+        USBL_DETECTED = 4,
+        LBL_DETECTED = 5,
+        DEPTH_DETECTED = 6,
+        EMLOG_DETECTED = 7,
+        // 8 reserved
+        UTC_DETECTED = 9,
+        ALTITUDE_DETECTED = 10,
+        PPS_DETECTED = 11,
+        ZUPT_MODE_ACTIVATED = 12,
         // 13 reserved
         MANUAL_GPS_DETECTED = 14,
-        // 15-20 reserved
+        CTD_DETECTED = 15,
+        SIMULATION_MODE = 16,
+        // 17 reserved
+        DSP_INCOMPATIBILITY = 18,
+        HEADING_ALERT = 19,
+        POSITION_ALERT = 20,
         WAIT_FOR_POSITION = 21,
-        // 22-23 reserved
+        // 22 reserved
+        POLAR_MODE = 23,
         INTERNAL_LOG = 24,
-        // 25-26 reserved
+        // 25 reserved
+        DOV_CORR_DETECTED = 26,
         MPC_OVERLOAD = 27,
-        POWER_SUPPLY_FAILURE,
-        RD_MODE,
-        CONFIGURATION_SAVED,
+        POWER_SUPPLY_FAILURE = 28,
+        // 29 reserved
+        CONFIGURATION_SAVED = 30,
         // 31 reserved
     };
 
     enum Status3
     {
-        // 0-12 reserved
-        VTG1_DETECTED = 13,
-        // 14 reserved
-        MANUAL_ATT_DETECTED = 15,
-        INPUT_CAN_ERR,
-        INPUT_CAN_ACTIVITY,
-        // 18-31 reserved
+        UTC2_DETECTED = 0,
+        PPS2_DETECTED = 1,
+        ADVANCED_FILTERING = 2,
+        NTP_SYNC_IN_PROGRESS = 3,
+        NTP_SYNCHRO = 5,
+        NTP_FAILED = 6,
+        // 7 reserved
+        DVL2_BT_DETECTED = 8,
+        DVL2_WT_DETECTED = 9,
+        // 10 - 17 reserved
+        SYSTEM_READY = 18,
+        // 19 - 25 reserved
+        SYSTEM_FULL_PERF = 26,
+        USBL2_DETECTED = 28,
+        USBL3_DETECTED = 29
+        // 30-31 reserved
     };
 
     uint32_t status1 = 0;
