@@ -37,7 +37,7 @@ struct INSUserStatus
         OUTPUT_D_ERR = 24,
         OUTPUT_E_ERR = 25,
         HRP_INVALID = 26,
-        ALIGNEMENT = 27,
+        ALIGNMENT = 27,
         FINE_ALIGNMENT = 28,
         NAVIGATION = 29,
         DEGRADED_MODE = 30,
